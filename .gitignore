@@ -1,2 +1,4 @@
 # created by virtualenv automatically
 **/lib/
+**/motogp_api/settings.py
+**pyvenv.cfg
