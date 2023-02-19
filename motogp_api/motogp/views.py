@@ -1,10 +1,10 @@
 from django.shortcuts import render
 from django.conf import settings
-from .models import Rider, Marc, Valen, Team, Repsol_Honda
+from .models import Rider, Team
 
 
 # Create your views here.
-"""def rider(request):
+def rider(request):
     
     title = "More about our riders"
     name = Rider.name
@@ -15,7 +15,7 @@ from .models import Rider, Marc, Valen, Team, Repsol_Honda
     moto3_debut = Rider.moto3_debut
     moto2_debut = Rider.moto2_debut
     motogp_debut = Rider.motogp_debut
-    current_team = Rider.current_team
+    team = Rider.team
     old_teams = Rider.old_teams
     about_rider = Rider.about_rider
 
@@ -28,13 +28,13 @@ from .models import Rider, Marc, Valen, Team, Repsol_Honda
         "moto3_debut": moto3_debut,
         "moto2_debut": moto2_debut,
         "motoGp_debut": motogp_debut,
-        "current_team": current_team,
+        "team": team,
         "old_teams": old_teams,
         "about_rider": about_rider,
     }
 
-    return render(request, "rider.html", context)"""
-
+    return render(request, "rider.html", context)
+"""
 # Vista para Marc
 
 def marc(request):
@@ -100,16 +100,17 @@ def valen(request):
     }
 
     return render(request, "rider.html", context)
+"""
 
-def repsol_honda(request):
+def team(request):
     title = "More about teams"
-    team = Repsol_Honda.team
-    rider_one = Repsol_Honda.rider_one
-    rider_two = Repsol_Honda.rider_two
-    bike = Repsol_Honda.bike
-    constructor_titles = Repsol_Honda.constructor_titles
-    sponsor = Repsol_Honda.sponsor
-    history = Repsol_Honda.history
+    team = Team.team
+    rider_one = Team.rider_one
+    rider_two = Team.rider_two
+    bike = Team.bike
+    constructor_titles = Team.constructor_titles
+    sponsor = Team.sponsor
+    history = Team.history
 
     context = {
         "team": team,

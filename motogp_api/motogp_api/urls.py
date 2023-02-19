@@ -19,8 +19,8 @@ from motogp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('Marc/', views.marc, name='Marc'),
-    path('Valentino/', views.valen, name='Valen'),
+    path('Rider/', views.rider, name='Rider'),
+    #path('Valentino/', views.valen, name='Valen'),
     #path('{name}/', views.__name__),
-    path('Honda/', views.repsol_honda, name="Honda"),
+    path('Team/', views.team, name="Team"),
 ]
