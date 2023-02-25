@@ -5,14 +5,19 @@
     {{ rider }}
 </h1>
 
-<p>Name: {{ rider }}</p> 
-<p>Age: {{ age }}</p> 
-<p>MotoGp Titles: {{ motogp_titles}}</p> 
-<p>Moto2 Titles: {{ moto2_titles }}</p> 
-<p>Moto3 Titles: {{ moto3_titles }}</p> 
-<p>Moto3 Debut: {{ moto3_debut }}</p> 
-<p>Moto2 Debut: {{ moto2_debut }}</p>
-<p>MotoGP Debut: {{ motogp_debut }}</p>
-<p>Current team: {{ team }}</p>
-<p>Oldt teams: {{ old_teams }}</p>
-<p>About: {{ about_rider }}</p>
+{% for rider in riders %}
+<p>
+    <li>Name: {{ rider.rider }}</li>
+    <li>Age: {{ rider.age }}</td>
+    <li>MotoGp Titles: {{ rider.motogp_titles }}</li>
+    <li>Moto2 Titles: {{ rider.moto2_titles }}</li>
+    <li>Moto3 Titles: {{ rider.moto3_titles }}</li>
+    <li>Moto3 Debut: {{ rider.moto3_debut }}</li>
+    <li>Moto2 Debut: {{ rider.moto2_debut }}</li>
+    <li>MotoGP Debut: {{ rider.motogp_debut }}</li>
+    <li>Current team: {{ rider.team }}</li>
+    <li>Oldt teams: {{ rider.old_teams }}</li>
+    <li>About: {{ rider.about_rider }}</li>
+</p>
+
+{% endfor %}

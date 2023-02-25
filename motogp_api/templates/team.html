@@ -5,9 +5,13 @@
     {{ team }}
 </h1>
 
-<p>Team: {{ team }}</p> 
-<p>Riders: {{ rider_one }} and {{ rider_two }}</p> 
-<p>Bike: {{ bike }}</p> 
-<p>Constructor Titles: {{ constructor_titles }}</p> 
-<p>Sponsor: {{ sponsor }}</p> 
-<p>History: {{ history }}</p> 
+{% for team in teams %}
+<p>
+    <li>Team: {{ team.team }}</li> 
+    <li>Riders: {{ rider_one }} and {{ team.rider_two }}</li> 
+    <li>Bike: {{ team.bike }}</li> 
+    <li>Constructor Titles: {{ team.constructor_titles }}</li> 
+    <li>Sponsor: {{ team.sponsor }}</li> 
+    <li>History: {{ team.history }}</li> 
+</p>
+{% endfor %}
